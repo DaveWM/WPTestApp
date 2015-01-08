@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="TestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{StaticResource MainViewModel}">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Undo" Label="Reset" Name="btnNope" Command="{Binding Path=ResetTitle}"/>
+            <AppBarButton Label="Login" Click="AppBarButton_Click" Icon="Account"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+            <TextBlock x:Name="lblTitle" Style="{ThemeResource HeaderTextBlockStyle}" TextWrapping="Wrap" VerticalAlignment="Top" Text="Main Page"></TextBlock>
+            <TextBox Margin="10,20,0,0" Width="200" HorizontalAlignment="Left"  Name="txtTitle" Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=Default}" InputScope="AlphanumericFullWidth"></TextBox>
+            <TextBlock Margin="10,15,0,0">
+                <Run Text="Searching for: "></Run>
+                <Run Text="{Binding Title}"></Run>
+            </TextBlock>
+            <ListView Width="300" Margin="10,5,0,0" ItemsSource="{Binding Items}" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch">
+                <ListView.ItemContainerTransitions>
+                    <TransitionCollection>
+                        <AddDeleteThemeTransition></AddDeleteThemeTransition>
+                        <ContentThemeTransition></ContentThemeTransition>
+                    </TransitionCollection>
+                </ListView.ItemContainerTransitions>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="1" BorderBrush="DarkGray" Padding="5,5,5,5">
+                            <TextBlock Width="Auto" Text="{Binding}" Style="{ThemeResource BodyTextBlockStyle}"/>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Page>
