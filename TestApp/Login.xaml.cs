@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Security.Authentication.Web;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +23,8 @@ namespace TestApp
     /// </summary>
     public sealed partial class Login : Page
     {
+        private const string clientId = "b65ee16c9de23e519ad0";
+
         public Login()
         {
             this.InitializeComponent();
@@ -34,6 +37,11 @@ namespace TestApp
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            WebAuthenticationBroker.AuthenticateAndContinue(new Uri(String.Format("https://github.com/login/oauth/authorize?client_id={0}&scope=repo",clientId)), WebAuthenticationBroker.GetCurrentApplicationCallbackUri());
         }
     }
 }

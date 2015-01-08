@@ -124,7 +124,7 @@ namespace TestApp.TestApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[12];
             _typeNameTable[0] = "Microsoft.ApplicationInsights.TelemetryClient";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Microsoft.ApplicationInsights.DataContracts.TelemetryContext";
@@ -133,11 +133,12 @@ namespace TestApp.TestApp_XamlTypeInfo
             _typeNameTable[5] = "System.Collections.ObjectModel.ObservableCollection`1<String>";
             _typeNameTable[6] = "System.Collections.ObjectModel.Collection`1<String>";
             _typeNameTable[7] = "System.Windows.Input.ICommand";
-            _typeNameTable[8] = "TestApp.MainPage";
+            _typeNameTable[8] = "TestApp.Login";
             _typeNameTable[9] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[10] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[11] = "TestApp.MainPage";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[12];
             _typeTable[0] = typeof(global::Microsoft.ApplicationInsights.TelemetryClient);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Microsoft.ApplicationInsights.DataContracts.TelemetryContext);
@@ -146,9 +147,10 @@ namespace TestApp.TestApp_XamlTypeInfo
             _typeTable[5] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.String>);
             _typeTable[6] = typeof(global::System.Collections.ObjectModel.Collection<global::System.String>);
             _typeTable[7] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[8] = typeof(global::TestApp.MainPage);
+            _typeTable[8] = typeof(global::TestApp.Login);
             _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[10] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[11] = typeof(global::TestApp.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -188,7 +190,8 @@ namespace TestApp.TestApp_XamlTypeInfo
         private object Activate_3_MainViewModel() { return new global::TestApp.MainViewModel(); }
         private object Activate_5_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.String>(); }
         private object Activate_6_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.String>(); }
-        private object Activate_8_MainPage() { return new global::TestApp.MainPage(); }
+        private object Activate_8_Login() { return new global::TestApp.Login(); }
+        private object Activate_11_MainPage() { return new global::TestApp.MainPage(); }
         private void VectorAdd_5_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
@@ -263,9 +266,9 @@ namespace TestApp.TestApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  TestApp.MainPage
+            case 8:   //  TestApp.Login
                 userType = new global::TestApp.TestApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_MainPage;
+                userType.Activator = Activate_8_Login;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -276,6 +279,13 @@ namespace TestApp.TestApp_XamlTypeInfo
 
             case 10:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::TestApp.TestApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  TestApp.MainPage
+                userType = new global::TestApp.TestApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;

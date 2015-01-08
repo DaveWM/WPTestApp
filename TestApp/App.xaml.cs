@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -26,7 +30,6 @@ namespace TestApp
     public sealed partial class App : Application
     {
         private TransitionCollection transitions;
-        private ContinuationManager continuationManager { get; } = new ContinuationManager();
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -132,13 +135,33 @@ namespace TestApp
             deferral.Complete();
         }
 
-        protected override void OnActivated(IActivatedEventArgs args)
+        protected override async void OnActivated(IActivatedEventArgs args)
         {
             //Check if this is a continuation
-            var continuationEventArgs = args as IContinuationActivatedEventArgs;
-            if (continuationEventArgs != null)
+            var wabArgs = args as WebAuthenticationBrokerContinuationEventArgs;
+            if (wabArgs != null)
             {
-                continuationManager.Continue(continuationEventArgs);
+                var responseUrl = wabArgs.WebAuthenticationResult.ResponseData;
+                var regex = new Regex(@"(?<=\?code=).*");
+                var code = regex.Match(responseUrl).Value;
+
+                var request = (HttpWebRequest)WebRequest.Create(String.Format("https://github.com/login/oauth/access_token"));
+                request.Method = "POST";
+                request.ContentType = "application/x-www-form-urlencoded";
+                request.Accept = "application/json";
+                var postData = String.Format("client_id={0}&client_secret={1}&code={2}", "b65ee16c9de23e519ad0", "420ff718c10e15ef29972d811ca9a270a88207b7", code);
+                using (var stream = await request.GetRequestStreamAsync())
+                {
+                    var byteData = System.Text.Encoding.UTF8.GetBytes(postData);
+                    stream.Write(byteData, 0, byteData.Length);
+                }
+                var response = await request.GetResponseAsync();
+                using(var reader = new StreamReader(response.GetResponseStream()))
+                {
+                    var resultJson = reader.ReadToEnd();
+                    dynamic resultObj = JsonConvert.DeserializeObject(resultJson);
+                    var token = resultObj["access_token"].ToString();
+                }
             }
 
             base.OnActivated(args);

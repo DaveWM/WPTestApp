@@ -46,3 +46,6 @@ C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\
 C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\Login.g.cs
 C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\Login.xaml
 C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\Login.xbf
+C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\TestApp.csproj.GenerateResource.Cache

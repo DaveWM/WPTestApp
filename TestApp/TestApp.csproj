@@ -141,6 +141,9 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsPhone.0.12.0-build17386\lib\wpa81\Microsoft.ApplicationInsights.Extensibility.Windows.winmd</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
