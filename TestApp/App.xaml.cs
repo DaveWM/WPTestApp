@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using Octokit;
+using Octokit.Internal;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,6 +13,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,7 +30,7 @@ namespace TestApp
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    public sealed partial class App : Application
+    public sealed partial class App : Windows.UI.Xaml.Application
     {
         private TransitionCollection transitions;
 
@@ -143,25 +146,24 @@ namespace TestApp
             {
                 var responseUrl = wabArgs.WebAuthenticationResult.ResponseData;
                 var regex = new Regex(@"(?<=\?code=).*");
-                var code = regex.Match(responseUrl).Value;
 
-                var request = (HttpWebRequest)WebRequest.Create(String.Format("https://github.com/login/oauth/access_token"));
-                request.Method = "POST";
-                request.ContentType = "application/x-www-form-urlencoded";
-                request.Accept = "application/json";
-                var postData = String.Format("client_id={0}&client_secret={1}&code={2}", "b65ee16c9de23e519ad0", "420ff718c10e15ef29972d811ca9a270a88207b7", code);
-                using (var stream = await request.GetRequestStreamAsync())
+                var code = regex.Match(responseUrl).Value;
+                var clientId = "b65ee16c9de23e519ad0";
+                var clientSecret = "420ff718c10e15ef29972d811ca9a270a88207b7";
+
+                var client = new GitHubClient(new ProductHeaderValue("TestApp"));
+
+                var token = await client.Oauth.CreateAccessToken(new OauthTokenRequest(clientId, clientSecret, code));
+                var settings = ApplicationData.Current.LocalSettings;
+                if (settings.Values.ContainsKey("token"))
                 {
-                    var byteData = System.Text.Encoding.UTF8.GetBytes(postData);
-                    stream.Write(byteData, 0, byteData.Length);
+                    settings.Values["token"] = token.AccessToken;
                 }
-                var response = await request.GetResponseAsync();
-                using(var reader = new StreamReader(response.GetResponseStream()))
+                else
                 {
-                    var resultJson = reader.ReadToEnd();
-                    dynamic resultObj = JsonConvert.DeserializeObject(resultJson);
-                    var token = resultObj["access_token"].ToString();
+                    settings.Values.Add("token", token.AccessToken);
                 }
+
             }
 
             base.OnActivated(args);

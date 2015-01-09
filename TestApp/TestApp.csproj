@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestApp</RootNamespace>
     <AssemblyName>TestApp</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>en-GB</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -143,6 +143,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Octokit">
+      <HintPath>..\packages\Octokit.0.6.2\lib\portable-net45+wp80+win+wpa81\Octokit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

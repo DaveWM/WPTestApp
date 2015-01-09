@@ -31,6 +31,9 @@
     <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\packages\Newtonsoft.Json.6.0.7\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\packages\Octokit.0.6.2\lib\portable-net45+wp80+win+wpa81\Octokit.dll">
+      <PackagePath>Octokit.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>

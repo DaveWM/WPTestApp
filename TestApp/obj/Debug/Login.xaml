@@ -7,21 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
-        <TextBlock VerticalAlignment="Center" Padding="10" Style="{ThemeResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="0">Username</TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="0" Padding="10"></TextBox>
-        <TextBlock Padding="10" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Style="{ThemeResource BodyTextBlockStyle}">Password</TextBlock>
-        <PasswordBox Grid.Column="1" Grid.Row="1" Padding="10"></PasswordBox>  
-        <Button x:ConnectionId='1' Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" Name="btnLogin"                       >Login</Button>
+    <Grid> 
+        <Button x:ConnectionId='1' Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" Name="btnLogin"                        HorizontalAlignment="Center">Login</Button>
     </Grid>
 </Page>
 

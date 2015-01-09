@@ -49,3 +49,6 @@ C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\
 C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\Newtonsoft.Json.dll
 C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\Newtonsoft.Json.xml
 C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\TestApp.csproj.GenerateResource.Cache
+C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\Octokit.dll
+C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\Octokit.pdb
+C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\Octokit.xml

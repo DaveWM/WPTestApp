@@ -19,46 +19,17 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="ColumnDefinitions" />
-      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
-      <RootMethod Name="GetColumnSpan" />
-      <RootMethod Name="SetColumnSpan" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="Inlines" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Padding" />
-      <RootProperty Name="Name" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="InputScope" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
-      <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Content" />
       <RootEvent Name="Click" />
     </RootType>
@@ -83,6 +54,23 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Style" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="InputScope" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Width" />
