@@ -1,79 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>ELYSIUM</Machine>
-    <WindowsUser>DavidM</WindowsUser>
+    <Machine>DAVID-PC</Machine>
+    <WindowsUser>David</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>cce61fd3-448f-4494-be0f-0bb11c18729b</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\David\Documents\GitHub\WPTestApp\TestApp\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\TestApp.exe">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\bin\Debug\TestApp.exe">
       <PackagePath>TestApp.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\packages\Microsoft.ApplicationInsights.RuntimeTelemetry.0.12.0-build17386\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.winmd">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\BackgroundAgent\bin\Debug\BackgroundAgent.winmd">
+      <PackagePath>BackgroundAgent.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\packages\Microsoft.ApplicationInsights.RuntimeTelemetry.0.12.0-build17386\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.winmd">
       <PackagePath>Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\packages\Microsoft.ApplicationInsights.WindowsPhone.0.12.0-build17386\lib\wpa81\Microsoft.ApplicationInsights.Extensibility.Windows.winmd">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\packages\Microsoft.ApplicationInsights.WindowsPhone.0.12.0-build17386\lib\wpa81\Microsoft.ApplicationInsights.Extensibility.Windows.winmd">
       <PackagePath>Microsoft.ApplicationInsights.Extensibility.Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\packages\Microsoft.ApplicationInsights.0.12.0-build17386\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.winmd">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\packages\Microsoft.ApplicationInsights.0.12.0-build17386\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.winmd">
       <PackagePath>Microsoft.ApplicationInsights.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\packages\Newtonsoft.Json.6.0.7\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\packages\Newtonsoft.Json.6.0.7\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\packages\Octokit.0.6.2\lib\portable-net45+wp80+win+wpa81\Octokit.dll">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\packages\Octokit.0.6.2\lib\portable-net45+wp80+win+wpa81\Octokit.dll">
       <PackagePath>Octokit.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\obj\Debug\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\obj\Debug\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\Assets\Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\Assets\SmallLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\Assets\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\Assets\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\Assets\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\Assets\WideLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\Login.xbf">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\bin\Debug\Login.xbf">
       <PackagePath>Login.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\TestApp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\bin\Debug\TestApp.xr.xml">
       <PackagePath>TestApp.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\davidm\Documents\Visual Studio 2015\Projects\TestApp\TestApp\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\David\Documents\GitHub\WPTestApp\TestApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

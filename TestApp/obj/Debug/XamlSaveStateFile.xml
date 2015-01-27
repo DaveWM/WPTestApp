@@ -1,10 +1,11 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
     <LocalAssembly PathName="c:\users\davidm\documents\visual studio 2015\projects\testapp\testapp\obj\debug\intermediatexaml\testapp.exe" HashGuid="ef8f5352-f246-a371-f2d4-87c1b3517237" />
-    <ReferenceAssembly PathName="c:\users\davidm\documents\visual studio 2015\projects\testapp\packages\microsoft.applicationinsights.runtimetelemetry.0.12.0-build17386\lib\portable-win81+wpa81\microsoft.applicationinsights.extensibility.runtimetelemetry.winmd" HashGuid="82581450-406c-70ce-4d07-9f0e39d59d31" />
-    <ReferenceAssembly PathName="c:\users\davidm\documents\visual studio 2015\projects\testapp\packages\microsoft.applicationinsights.windowsphone.0.12.0-build17386\lib\wpa81\microsoft.applicationinsights.extensibility.windows.winmd" HashGuid="2cc9fd37-9839-0765-e369-aa937f791053" />
-    <ReferenceAssembly PathName="c:\users\davidm\documents\visual studio 2015\projects\testapp\packages\microsoft.applicationinsights.0.12.0-build17386\lib\portable-win81+wpa81\microsoft.applicationinsights.winmd" HashGuid="6b4da953-144b-1571-ffe9-e9273eed69e0" />
-    <ReferenceAssembly PathName="c:\users\davidm\documents\visual studio 2015\projects\testapp\packages\newtonsoft.json.6.0.7\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="d0c321bd-bfc3-83af-d7a2-da028a11b529" />
-    <ReferenceAssembly PathName="c:\users\davidm\documents\visual studio 2015\projects\testapp\packages\octokit.0.6.2\lib\portable-net45+wp80+win+wpa81\octokit.dll" HashGuid="01409461-7334-e52d-2652-dc891db79e56" />
+    <ReferenceAssembly PathName="c:\users\david\documents\github\wptestapp\backgroundagent\bin\debug\backgroundagent.winmd" HashGuid="3807f64e-2b76-4b2d-ec72-d8cb953c0105" />
+    <ReferenceAssembly PathName="c:\users\david\documents\github\wptestapp\packages\microsoft.applicationinsights.runtimetelemetry.0.12.0-build17386\lib\portable-win81+wpa81\microsoft.applicationinsights.extensibility.runtimetelemetry.winmd" HashGuid="82581450-406c-70ce-4d07-9f0e39d59d31" />
+    <ReferenceAssembly PathName="c:\users\david\documents\github\wptestapp\packages\microsoft.applicationinsights.windowsphone.0.12.0-build17386\lib\wpa81\microsoft.applicationinsights.extensibility.windows.winmd" HashGuid="2cc9fd37-9839-0765-e369-aa937f791053" />
+    <ReferenceAssembly PathName="c:\users\david\documents\github\wptestapp\packages\microsoft.applicationinsights.0.12.0-build17386\lib\portable-win81+wpa81\microsoft.applicationinsights.winmd" HashGuid="6b4da953-144b-1571-ffe9-e9273eed69e0" />
+    <ReferenceAssembly PathName="c:\users\david\documents\github\wptestapp\packages\newtonsoft.json.6.0.7\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="d0c321bd-bfc3-83af-d7a2-da028a11b529" />
+    <ReferenceAssembly PathName="c:\users\david\documents\github\wptestapp\packages\octokit.0.6.2\lib\portable-net45+wp80+win+wpa81\octokit.dll" HashGuid="01409461-7334-e52d-2652-dc891db79e56" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

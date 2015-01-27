@@ -1,25 +1,13 @@
-﻿using Newtonsoft.Json;
-using Octokit;
-using Octokit.Internal;
+﻿using Octokit;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.ApplicationModel.Background;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
@@ -42,6 +30,28 @@ namespace TestApp
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
+            RegisterBackgroundTask();
+        }
+
+        private void RegisterBackgroundTask()
+        {
+            var taskName = "BackgroundTask";
+            var alreadyRegistered = BackgroundTaskRegistration.AllTasks.Any((t) =>
+            {
+                return t.Value.Name == taskName;
+            });
+
+            if (!alreadyRegistered)
+            {
+                var builder = new BackgroundTaskBuilder();
+
+                builder.Name = taskName;
+                builder.TaskEntryPoint = "BackgroundAgent.\{taskName}";
+                builder.SetTrigger(new TimeTrigger(20,false));
+                builder.AddCondition(new SystemCondition(SystemConditionType.InternetAvailable));
+                builder.Register();
+            }
         }
 
         /// <summary>
